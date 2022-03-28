@@ -9,9 +9,7 @@ export default function ProductosMasVendidos() {
             <h1 className='h1 dadoVuelta'>_________</h1>
             <div className="cartas">
                 <CartaProductos />
-                <CartaProductos />
-                <CartaProductos />
-                <CartaProductos />
+
             </div>
         </>
     )

@@ -108,7 +108,7 @@ const ResponsiveAppBar = () => {
 
                     {/* Carrito de compras  */}
                     <CarritoNav />
-
+                    {/* Menu usuario configuraciones */}
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
