@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import CarritoNav from './CarritoNav';
 
 const pages = ['Invernaderos y Carpas', 'Luces de cultivo', 'Fertilizantes', 'Sustratos', 'Más Categorias'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -38,6 +39,7 @@ const ResponsiveAppBar = () => {
         <AppBar className='navBar' position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    {/* titulo ventana pc escritorio */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -46,7 +48,7 @@ const ResponsiveAppBar = () => {
                     >
                         GROW SHOP
                     </Typography>
-
+                    {/* Box menu ventana escritorio */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -83,6 +85,7 @@ const ResponsiveAppBar = () => {
                             ))}
                         </Menu>
                     </Box>
+                    {/* Titulo menu vista celular */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -102,6 +105,9 @@ const ResponsiveAppBar = () => {
                             </Button>
                         ))}
                     </Box>
+
+                    {/* Carrito de compras  */}
+                    <CarritoNav />
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
