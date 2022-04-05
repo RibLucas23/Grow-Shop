@@ -1,63 +1,29 @@
-import * as React from 'react';
 import './ItemListContainer.css'
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { productosJson } from '../../productos'
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from './ItemList';
+import { useEffect, useState } from 'react';
+import customFetch from '../Utils/customFetch'
+import productos from '../Utils/productos'
 
 
+export default function ItemListContainer() {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        customFetch(3000, productos)
+            .then(resultado => setItems(resultado))
+            .catch(error => console.log(error))
 
-export default function CartaProductos() {
+    }, [items])
 
 
     return (
 
-        <>
-            {productosJson.map((producto) => {
-                return (
-                    <Card className='carta' key={producto.id} sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                height="300"
-                                image={producto.url}
-                                alt="kit indoor"
-                            />
-                            <CardContent>
-                                <Typography className='carta__titulo' gutterBottom variant="h5" component="div">
-                                    {producto.titulo}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    • {producto.descripcion}
-                                </Typography>
-                                <span className='carta__precio'>$ {producto.precio}</span>
-                            </CardContent>
-                            <p>Stock: {producto.stock}</p>
-                        </CardActionArea>
-
-                        {/* Contador */}
-
-                        <ItemCount stock={producto.stock} />
-                    </Card>
-                )
-            })}
 
 
-        </>
+        <ItemList productos={items} />
+
+
+
+
     )
 }
 
-// export default function CartaProductos() {
-//     let img = "../imgs/productos/kit1.jpg"
-//     return (
-//         <>
-//             <div>
-//                 <img src={img} alt="kit indoor" />
-//                 <h5>KIT INDOOR LED MX 50 BLACK CARPA CULTIVO SUSTRATOS MACETAS NEGRO</h5>
-//             </div>
-//         </>
-//     )
-// }

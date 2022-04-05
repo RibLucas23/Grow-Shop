@@ -1,5 +1,5 @@
 import { kit1, carpa, extractor, panelLed, poleas, timer } from './imgs/productos/indexImagenes'
-export const productosJson = [
+const productos = [
     {
         "id": 1,
         "nombre": "Kit Indoor",
@@ -62,3 +62,4 @@ export const productosJson = [
         "stock": "24"
     },
 ]
+export default productos

@@ -2,7 +2,6 @@ import './App.css';
 import ImagenSuperior from './componentes/ImagenSuperior';
 import ProductosMasVendidos from './componentes/Secciones/ProductosMasVendidos';
 import ResponsiveAppBar from './componentes/NavBar/ResponsiveAppBar';
-import ContadorClicks from './componentes/ContadorClicks';
 
 export default function App() {
   return (
@@ -10,7 +9,6 @@ export default function App() {
       <ResponsiveAppBar />
       <ImagenSuperior />
       <ProductosMasVendidos />
-      <ContadorClicks />
     </>
   );
 }

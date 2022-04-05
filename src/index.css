@@ -11,29 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.navBar{
+
+.navBar {
   background-color: #1D8A26 !important;
   position: absolute !important;
   opacity: 80%;
 }
-.menuNavBar{
+
+.menuNavBar {
   justify-content: center !important;
 }
-.imagenSuperior{
+
+.imagenSuperior {
   width: 100%;
   height: 350px;
-  object-fit:cover;
+  object-fit: cover;
 }
+
 .h1 {
   color: #45C44F;
   text-align: center;
   font-size: 3rem;
   margin-bottom: 0;
 }
-.dadoVuelta{
+
+.dadoVuelta {
   margin-top: 0px;
   font-size: 2rem;
   margin-bottom: 10px;
 
 }
 
+.cartas {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}

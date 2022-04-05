@@ -1,23 +1,21 @@
-.cartas {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
 .carta {
     margin: 10px;
     text-align: center;
 }
+
 .carta__titulo:hover {
-color: #1D8A26 ;
+    color: #1D8A26;
 }
+
 .carta__precio {
     display: flex;
     color: red;
     justify-content: flex-end;
     font-size: 1.5rem;
     margin-top: 10px;
-    
+
 }
+
 .contador {
     display: flex;
     justify-content: space-around;
