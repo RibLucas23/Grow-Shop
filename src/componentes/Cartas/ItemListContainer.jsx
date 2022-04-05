@@ -1,10 +1,12 @@
 import * as React from 'react';
+import './ItemListContainer.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import { productosJson } from '../productos'
+import { productosJson } from '../../productos'
+import ItemCount from '../ItemCount/ItemCount';
 
 
 
@@ -25,14 +27,20 @@ export default function CartaProductos() {
                                 alt="kit indoor"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography className='carta__titulo' gutterBottom variant="h5" component="div">
                                     {producto.titulo}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
                                     • {producto.descripcion}
                                 </Typography>
+                                <span className='carta__precio'>$ {producto.precio}</span>
                             </CardContent>
+                            <p>Stock: {producto.stock}</p>
                         </CardActionArea>
+
+                        {/* Contador */}
+
+                        <ItemCount stock={producto.stock} />
                     </Card>
                 )
             })}

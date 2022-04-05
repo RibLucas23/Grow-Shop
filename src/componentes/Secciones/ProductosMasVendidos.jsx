@@ -1,4 +1,4 @@
-import CartaProductos from "./CartaProductos";
+import ItemListContainer from "../Cartas/ItemListContainer";
 
 export default function ProductosMasVendidos() {
 
@@ -8,7 +8,7 @@ export default function ProductosMasVendidos() {
             <h1 className='h1'>PRODUCTOS MÁS VENDIDOS</h1>
             <h1 className='h1 dadoVuelta'>_________</h1>
             <div className="cartas">
-                <CartaProductos />
+                <ItemListContainer />
 
             </div>
         </>

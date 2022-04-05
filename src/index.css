@@ -37,11 +37,3 @@ code {
 
 }
 
-.cartas {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-.carta {
-  margin: 10px;
-}
