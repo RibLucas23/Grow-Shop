@@ -1,4 +1,4 @@
-import img from '../imgs/img1.jpg'
+import img from './Utils/imgs/img1.jpg'
 
 export default function ImagenSuperior() {
     return (
