@@ -1,5 +1,5 @@
 import { kit1, carpa, extractor, panelLed, poleas, timer } from './imgs/productos/indexImagenes'
-const productos = [
+export const productos = [
     {
         "id": 1,
         "nombre": "Kit Indoor",
@@ -8,7 +8,12 @@ const productos = [
         "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
         "precio": "47.000",
 
-        "stock": "10"
+        "stock": "10",
+
+        "productosImgs": {
+            carpa: { carpa },
+            extractor: { extractor }
+        }
     },
     {
         "id": 2,
@@ -62,4 +67,17 @@ const productos = [
         "stock": "24"
     },
 ]
-export default productos
+export const productoUnico = {
+    "id": 1,
+    "nombre": "Kit Indoor",
+    "titulo": "KIT INDOOR LED MX 50 BLACK CARPA CULTIVO SUSTRATOS MACETAS NEGRO",
+    "url": `${kit1}`,
+    "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
+    "precio": "47.000",
+
+    "stock": "10",
+    "productosImgs": {
+        carpa: `${carpa}`,
+        extractor: `${extractor}`
+    }
+}

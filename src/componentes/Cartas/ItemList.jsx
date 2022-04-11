@@ -3,7 +3,6 @@ import Item from './Item'
 import './ItemListContainer.css'
 
 function ItemList({ productos }) {
-    console.log(productos)
 
     return (
 

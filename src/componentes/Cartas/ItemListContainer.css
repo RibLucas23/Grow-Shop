@@ -20,3 +20,29 @@
     display: flex;
     justify-content: space-around;
 }
+
+.itemDetail {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: auto;
+
+}
+
+.itemDetail__imagenes {
+    background-color: #1D8A26;
+    width: 100%;
+}
+
+.itemDetail__detalles {
+    width: 100%;
+}
+
+.itemDetail__detalles h1 {
+    font-size: 56px;
+}
+
+.itemDetail__detalles h2 {
+    font-size: 46px;
+    color: #45C44F;
+}

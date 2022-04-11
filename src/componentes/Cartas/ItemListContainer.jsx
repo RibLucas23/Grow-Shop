@@ -2,7 +2,7 @@ import './ItemListContainer.css'
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import customFetch from '../Utils/customFetch'
-import productos from '../Utils/productos'
+import { productos } from '../Utils/productos'
 
 
 export default function ItemListContainer() {
@@ -13,7 +13,6 @@ export default function ItemListContainer() {
             .catch(error => console.log(error))
 
     }, [items])
-
 
     return (
 
