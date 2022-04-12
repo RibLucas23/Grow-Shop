@@ -17,6 +17,11 @@
 }
 
 .contador {
+    display: flexbox;
+    align-content: baseline;
+}
+
+.contador__botones {
     display: flex;
     justify-content: space-around;
 }
@@ -31,8 +36,11 @@
 
 .itemDetail__imagenes {
     background-color: #1D8A26;
-    width: 100%;
+    width: 50%;
+    justify-items: center;
 }
+
+
 
 .itemDetail__detalles {
     width: 100%;
@@ -45,4 +53,9 @@
 .itemDetail__detalles h2 {
     font-size: 46px;
     color: #45C44F;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }

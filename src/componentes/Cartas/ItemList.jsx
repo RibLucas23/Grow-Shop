@@ -4,16 +4,12 @@ import './ItemListContainer.css'
 
 function ItemList({ productos }) {
 
+    // USANDO LOS PRODUCTOS QUE ME PASA ItemListContainer,  MAPEO Y LE PASO POR PARAMETROS A ITEM 
     return (
 
         productos.map(producto => (
-            <Item
-                key={producto.id}
-                titulo={producto.titulo}
-                precio={producto.precio}
-                url={producto.url}
-                descripcion={producto.descripcion}
-                stock={producto.stock}
+            <Item item={producto}
+
             />
         ))
 

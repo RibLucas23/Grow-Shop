@@ -22,6 +22,11 @@ code {
   justify-content: center !important;
 }
 
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
 .imagenSuperior {
   width: 100%;
   height: 350px;

@@ -6,35 +6,42 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
 
-export default function Item({ id, precio, titulo, url, descripcion, stock }) {
-
+export default function Item({ item }) {
+    // CREO LA CARTA PARA CADA PRODUCTO 
     return (
 
-        <Card className='carta' key={id} sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="300"
-                    image={url}
-                    alt="kit indoor"
-                />
-                <CardContent>
-                    <Typography className='carta__titulo' gutterBottom variant="h5" component="div">
-                        {titulo}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        • {descripcion}
-                    </Typography>
-                    <span className='carta__precio'>$ {precio}</span>
-                </CardContent>
-                <p>Stock: {stock}</p>
-            </CardActionArea>
+        <Card className='carta' key={item.id} sx={{ maxWidth: 345 }}>
+
+            <Link to={"/item/" + item.id} className='link'>
+
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="300"
+                        image={item.url}
+                        alt="kit indoor"
+                    />
+                    <CardContent>
+                        <Typography className='carta__titulo' gutterBottom variant="h5" component="div">
+                            {item.titulo}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            • {item.descripcion}
+                        </Typography>
+                        <span className='carta__precio'>$ {item.precio}</span>
+                    </CardContent>
+                    <p>Stock: {item.stock}</p>
+                </CardActionArea>
+            </Link>
             {/* Contador */}
 
-            <ItemCount stock={stock} />
+            <ItemCount stock={item.stock} />
 
-        </Card>
+        </Card >
 
     )
 }
+
+

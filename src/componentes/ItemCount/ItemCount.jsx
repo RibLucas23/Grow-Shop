@@ -26,15 +26,15 @@ export default function ItemCount({ stock }) {
 
     return (
         <>
-            <div>
+            <div className='contador' >
 
-                <div className='contador'>
+                <div className='contador__botones'>
                     <Button variant="contained" color="success" onClick={resta}> - </Button>
                     {cantProduc}
                     <Button variant={"contained"} color={"success"} onClick={suma}> + </Button>
                 </div>
-
                 <button > AGREGAR AL CARRO </button>
+
             </div>
         </>
     )

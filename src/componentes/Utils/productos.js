@@ -1,4 +1,4 @@
-import { kit1, carpa, extractor, panelLed, poleas, timer } from './imgs/productos/indexImagenes'
+import { kit1, carpa, extractor, panelLed, poleas, timer, sustrato, packEden } from './imgs/productos/indexImagenes'
 export const productos = [
     {
         "id": 1,
@@ -7,12 +7,11 @@ export const productos = [
         "url": `${kit1}`,
         "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
         "precio": "47.000",
-
         "stock": "10",
-
+        "category": "promos",
         "productosImgs": {
-            carpa: { carpa },
-            extractor: { extractor }
+            carpa: `${carpa}`,
+            extractor: `${extractor}`
         }
     },
     {
@@ -21,8 +20,8 @@ export const productos = [
         "titulo": "CARPA CULTIVO INDOOR PROBOX BASIC VERSION 60 GARDEN HIGHPRO",
         "url": `${carpa}`,
         "descripcion": "Carpa Cultivo Indoor ProBox Basic Version 60 Garden HighPro",
-        "precio": "47.000",
-
+        "precio": "27.000",
+        "category": "carpas",
         "stock": "13"
 
     },
@@ -32,9 +31,10 @@ export const productos = [
         "titulo": "EXTRACTOR DE AIRE HYDRA 4 PULGADAS CON ADAPTADOR",
         "url": `${extractor}`,
         "descripcion": "Extractor con gran potencia, silencioso, de fácil instalación, muy resistente, y de bajo consumo.",
-        "precio": "47.000",
+        "precio": "17.000",
+        "stock": "14",
+        "category": "ventilacion",
 
-        "stock": "14"
     },
     {
         "id": 4,
@@ -43,8 +43,9 @@ export const productos = [
         "url": `${panelLed}`,
         "descripcion": "Remplaza un sodio de 200Watt con 1/3 del consumo , ideal para espacios de hasta 60x60cm. • Un equipo profesional para cultivo, con el que obtendrás resultados inigualables. • Este producto cuenta con características superiores, fabricados con LED CREE de la linea MHB y XPE.",
         "precio": "23.960",
+        "stock": "2",
+        "category": "iluminacion",
 
-        "stock": "2"
     },
     {
         "id": 5,
@@ -53,8 +54,9 @@ export const productos = [
         "url": `${poleas}`,
         "descripcion": "Poleas de Cultivarg, con todo lo necesario para colgar y regular tus equipos de iluminación y ventilación.",
         "precio": "715",
+        "stock": "7",
+        "category": "accesorios",
 
-        "stock": "7"
     },
     {
         "id": 6,
@@ -63,18 +65,40 @@ export const productos = [
         "url": `${timer}`,
         "descripcion": "Timer programable mecánico Zurich.",
         "precio": "930",
+        "stock": "24",
+        "category": "accesorios",
 
-        "stock": "24"
+    },
+    {
+        "id": 7,
+        "nombre": "sustrato EDEN 25 litros profesional",
+        "titulo": "SUSTRATO PROFESIONAL LIVIANO EDEN PERLITA TURBA HUMUS VERMI 25 LTS",
+        "url": `${sustrato}`,
+        "descripcion": "  EDEN - Queen´s paradise es un sustrato de uso profesional, que ofrece óptimas condiciones de siembra y/o trasplante, por su excelente aireación, retención de agua, reacción (pH) y Ce.",
+        "precio": "980",
+        "stock": "24",
+        "category": "sustratos",
+
+    },
+    {
+        "id": 8,
+        "nombre": "fertilizantes 4 pack eden",
+        "titulo": "COMBO EDEN 4PACK PARA TODAS LAS ETAPAS 125 CC",
+        "url": `${packEden}`,
+        "descripcion": "EDEN garantiza un óptimo desarrollo en cada etapa de la planta, maximizando el resultado mediante una manera de utilización sencilla. Son productos premium y casi obligatorios para fortalecer la planta en todas sus etapas, logrando resultados increíbles. Cont: 125cc",
+        "precio": "1000",
+        "stock": "24",
+        "category": "ferilizantes",
+
     },
 ]
 export const productoUnico = {
-    "id": 1,
+    "id": 7777,
     "nombre": "Kit Indoor",
     "titulo": "KIT INDOOR LED MX 50 BLACK CARPA CULTIVO SUSTRATOS MACETAS NEGRO",
     "url": `${kit1}`,
     "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
     "precio": "47.000",
-
     "stock": "10",
     "productosImgs": {
         carpa: `${carpa}`,

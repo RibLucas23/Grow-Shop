@@ -1,39 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import customFetch from '../Utils/customFetch';
+// import customFetch from '../Utils/customFetch';
 import ItemDetail from './ItemDetail'
-import { productoUnico } from '../Utils/productos'
-
+import { productos } from '../Utils/productos'
+import { useParams } from 'react-router-dom';
 
 
 
 function ItemDetailContainer() {
-
+    const { id } = useParams()
+    console.log(id)
     const [itemDetalle, setItemDetalle] = useState({})
 
     useEffect(() => {
-        customFetch(1000, productoUnico)
-            .then(resultado => setItemDetalle(resultado))
-            .catch(error => console.log(error))
+        let producto = productos.filter(product => product.id == id)
+        setItemDetalle(producto[0])
+        console.log(itemDetalle)
 
-    }, [itemDetalle])
+    }, [id, itemDetalle])
+
     return (
         <>
             <ItemDetail item={itemDetalle} />
 
         </>
     )
-    // return (
-    //     <>
-    //         <ItemDetail
-    //             key={itemDetalle.id}
-    //             titulo={itemDetalle.titulo}
-    //             precio={itemDetalle.precio}
-    //             url={itemDetalle.url}
-    //             descripcion={itemDetalle.descripcion}
-    //             stock={itemDetalle.stock} />
 
-    //     </>
-    // )
 }
 
 export default ItemDetailContainer
