@@ -10,8 +10,8 @@ export const productos = [
         "stock": "10",
         "category": "carpas",
         "productosImgs": {
-            carpa: `${carpa}`,
-            extractor: `${extractor}`
+            img1: `${carpa}`,
+            img2: `${extractor}`
         }
     },
     {
@@ -19,7 +19,8 @@ export const productos = [
         "nombre": "carpa",
         "titulo": "CARPA CULTIVO INDOOR PROBOX BASIC VERSION 60 GARDEN HIGHPRO",
         "url": `${carpa}`,
-        "descripcion": `Carpa de cultivo
+        "descripcion": "Carpa Cultivo Indoor ProBox Basic Version 60 Garden HighPro",
+        "descripcionLarga": `Carpa de cultivo
         • Dimensiones: 60 x 60 x 140 cm.
         • Material: Tela Mylar + Tela 600D.
         • Ventilación: 2 mangas de ventilación de 4 pulgadas.

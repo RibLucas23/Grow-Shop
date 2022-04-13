@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import ItemDetailImgs from './ItemDetailImgs'
 
 function ItemDetail({ item }) {
 
@@ -8,13 +9,14 @@ function ItemDetail({ item }) {
 
         <>
             <div className='itemDetail'>
-
-                <div className='itemDetail__imagenes'>
-                    {/* <div className='itemDetail__imagenes__chicas'>
+                {/* <div className='itemDetail__imagenes'>
+                    <div className='itemDetail__imagenes__chicas'>
+                        <img src={item.url} alt="imagen producto" />
                         <img src={item.productosImgs.carpa} alt="carpa" />
-                    </div> */}
-                    <img src={item.url} alt="imagen producto" />
-                </div>
+                        <img src={item.productosImgs.extractor} alt="" />
+                    </div>
+                </div> */}
+                <ItemDetailImgs producto={item} />
 
                 <div className='itemDetail__detalles'>
                     <h1>{item.titulo}</h1>

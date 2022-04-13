@@ -26,6 +26,16 @@
     justify-content: space-around;
 }
 
+.contador__num {
+    margin: 10px;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.detallesComprar button {
+    margin-left: 30px;
+}
+
 .itemDetail {
     display: flex;
     width: 100%;
@@ -38,7 +48,22 @@
     width: 50%;
     display: flex;
     justify-content: center;
+}
 
+.itemDetail__imagenes__chicas {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.itemDetail__imagenes__chicas img:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.itemDetail__imagenes__chicas img {
+    margin: auto 30px auto 25px;
+    width: 85%;
 }
 
 
@@ -72,8 +97,12 @@
 
 .botoneraItemDetalle {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
+    align-items: baseline;
+    margin-top: 10px;
+    flex-direction: column;
+
+}
+
+.botoneraItemDetalle button {
     margin-top: 10px;
 }
