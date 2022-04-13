@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import customFetch from '../Utils/customFetch'
 import { productos } from '../Utils/productos'
 import { useParams } from 'react-router-dom';
+import Loading from '../Utils/Loading';
 
 // TRAIGO LOS PRODUCTOS
 export default function ItemListContainer() {
@@ -18,9 +19,11 @@ export default function ItemListContainer() {
         setLoading(true)
         customFetch(2000, productos)
             .then((resultado) => {
+                // Cuando no hay ninguna id espesifica, se muestran todos los productos
                 if (id === undefined) {
                     setItems(resultado)
                 }
+                // Si hay una id espesifica, se muestra solo el/los productos espesifico
                 else if (id === 'Invernaderos y Carpas') {
                     setItems(resultado.filter(item => item.category === 'carpas'))
                 } else if (id === 'Luces de cultivo') {
@@ -35,6 +38,7 @@ export default function ItemListContainer() {
             })
 
             .catch(error => console.log(error))
+            //cuando termina de cargar, se cambia el estado de loading a false
             .finally(() => setLoading(false))
 
     }, [id])
@@ -46,7 +50,8 @@ export default function ItemListContainer() {
 
         <>
             {loading ? (
-                <div className='cartas'>
+                <div className='cargando'>
+                    <Loading />
                     <h1>Cargando los productos...</h1>
                 </div>
             ) : (

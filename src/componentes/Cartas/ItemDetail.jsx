@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 
 function ItemDetail({ item }) {
 
@@ -19,7 +20,10 @@ function ItemDetail({ item }) {
                     <h1>{item.titulo}</h1>
                     <h2>$ {item.precio}</h2>
                     <h3>{item.descripcion}</h3>
+                    <div className="botoneraItemDetalle">
+                        <ItemCount stock={item.stock} />
 
+                    </div>
                 </div>
             </div>
         </>

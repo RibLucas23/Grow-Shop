@@ -35,15 +35,17 @@
 }
 
 .itemDetail__imagenes {
-    background-color: #1D8A26;
     width: 50%;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+
 }
 
 
 
 .itemDetail__detalles {
-    width: 100%;
+    width: 50%;
+    margin-right: 10rem;
 }
 
 .itemDetail__detalles h1 {
@@ -58,4 +60,20 @@
 .link {
     text-decoration: none;
     color: black;
+}
+
+.cargando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    flex-direction: column;
+}
+
+.botoneraItemDetalle {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
 }
