@@ -4,6 +4,7 @@ import ProductosMasVendidos from './componentes/Secciones/ProductosMasVendidos';
 import ResponsiveAppBar from './componentes/NavBar/ResponsiveAppBar';
 import ItemDetailContainer from './componentes/Cartas/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemListContainer from './componentes/Cartas/ItemListContainer';
 export default function App() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function App() {
         <Routes>
 
           <Route exact path="/" element={<ProductosMasVendidos />} />
-          <Route exact path="/category/:id" element={<ProductosMasVendidos />} />
+          <Route exact path="/category/:id" element={<ItemListContainer />} />
 
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
 

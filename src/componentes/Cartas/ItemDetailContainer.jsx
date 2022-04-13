@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import customFetch from '../Utils/customFetch';
+import customFetch from '../Utils/customFetch';
 import ItemDetail from './ItemDetail'
 import { productos } from '../Utils/productos'
 import { useParams } from 'react-router-dom';
@@ -12,8 +12,12 @@ function ItemDetailContainer() {
     const [itemDetalle, setItemDetalle] = useState({})
 
     useEffect(() => {
-        let producto = productos.filter(product => product.id == id)
-        setItemDetalle(producto[0])
+        customFetch(2000, productos)
+            .then((resultado) => {
+                let producto = resultado.find(product => product.id === parseInt(id))
+                setItemDetalle(producto)
+            })
+            .catch(error => console.log(error))
         console.log(itemDetalle)
 
     }, [id, itemDetalle])

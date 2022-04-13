@@ -8,7 +8,7 @@ export const productos = [
         "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
         "precio": "47.000",
         "stock": "10",
-        "category": "promos",
+        "category": "carpas",
         "productosImgs": {
             carpa: `${carpa}`,
             extractor: `${extractor}`
@@ -33,7 +33,7 @@ export const productos = [
         "descripcion": "Extractor con gran potencia, silencioso, de fácil instalación, muy resistente, y de bajo consumo.",
         "precio": "17.000",
         "stock": "14",
-        "category": "ventilacion",
+        "category": "otros",
 
     },
     {
@@ -44,7 +44,7 @@ export const productos = [
         "descripcion": "Remplaza un sodio de 200Watt con 1/3 del consumo , ideal para espacios de hasta 60x60cm. • Un equipo profesional para cultivo, con el que obtendrás resultados inigualables. • Este producto cuenta con características superiores, fabricados con LED CREE de la linea MHB y XPE.",
         "precio": "23.960",
         "stock": "2",
-        "category": "iluminacion",
+        "category": "luces",
 
     },
     {
@@ -55,7 +55,7 @@ export const productos = [
         "descripcion": "Poleas de Cultivarg, con todo lo necesario para colgar y regular tus equipos de iluminación y ventilación.",
         "precio": "715",
         "stock": "7",
-        "category": "accesorios",
+        "category": "otros",
 
     },
     {
@@ -66,7 +66,7 @@ export const productos = [
         "descripcion": "Timer programable mecánico Zurich.",
         "precio": "930",
         "stock": "24",
-        "category": "accesorios",
+        "category": "otros",
 
     },
     {
@@ -88,7 +88,7 @@ export const productos = [
         "descripcion": "EDEN garantiza un óptimo desarrollo en cada etapa de la planta, maximizando el resultado mediante una manera de utilización sencilla. Son productos premium y casi obligatorios para fortalecer la planta en todas sus etapas, logrando resultados increíbles. Cont: 125cc",
         "precio": "1000",
         "stock": "24",
-        "category": "ferilizantes",
+        "category": "fertilizantes",
 
     },
 ]
