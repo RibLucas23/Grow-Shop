@@ -97,13 +97,14 @@ const ResponsiveAppBar = () => {
                     </Typography>
                     <Box className='menuNavBar' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                <Link to={"/category/" + page} className='logo'>{page} </Link>
-                            </Button>
+                            <Link to={"/category/" + page} className='logo'>
+                                <Button
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >{page}
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
 

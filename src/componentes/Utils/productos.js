@@ -12,7 +12,8 @@ export const productos = [
         "productosImgs": {
             img1: `${carpa}`,
             img2: `${extractor}`
-        }
+        },
+
     },
     {
         "id": 2,

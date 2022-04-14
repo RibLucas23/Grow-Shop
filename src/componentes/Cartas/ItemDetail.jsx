@@ -9,19 +9,14 @@ function ItemDetail({ item }) {
 
         <>
             <div className='itemDetail'>
-                {/* <div className='itemDetail__imagenes'>
-                    <div className='itemDetail__imagenes__chicas'>
-                        <img src={item.url} alt="imagen producto" />
-                        <img src={item.productosImgs.carpa} alt="carpa" />
-                        <img src={item.productosImgs.extractor} alt="" />
-                    </div>
-                </div> */}
+
                 <ItemDetailImgs producto={item} />
 
                 <div className='itemDetail__detalles'>
                     <h1>{item.titulo}</h1>
                     <h2>$ {item.precio}</h2>
                     <h3>{item.descripcion}</h3>
+
                     <div className="botoneraItemDetalle">
                         <ItemCount stock={item.stock} />
 

@@ -1,3 +1,4 @@
+/* CARTAS  */
 .carta {
     margin: 10px;
     text-align: center;
@@ -16,6 +17,7 @@
 
 }
 
+/* CONTADOR / BOTONERA  */
 .contador {
     display: flexbox;
     align-content: baseline;
@@ -32,6 +34,19 @@
     justify-content: center;
 }
 
+.botoneraItemDetalle {
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    flex-direction: column;
+
+}
+
+.botoneraItemDetalle button {
+    margin-top: 10px;
+}
+
+/* ITEM DETAIL  */
 .detallesComprar button {
     margin-left: 30px;
 }
@@ -82,11 +97,7 @@
     color: #45C44F;
 }
 
-.link {
-    text-decoration: none;
-    color: black;
-}
-
+/* LOADING  */
 .cargando {
     display: flex;
     justify-content: center;
@@ -95,14 +106,7 @@
     flex-direction: column;
 }
 
-.botoneraItemDetalle {
-    display: flex;
-    align-items: baseline;
-    margin-top: 10px;
-    flex-direction: column;
-
-}
-
-.botoneraItemDetalle button {
-    margin-top: 10px;
+.link {
+    text-decoration: none;
+    color: black;
 }
