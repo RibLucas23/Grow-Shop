@@ -3,7 +3,7 @@ import Button from '@mui/material/Button'
 
 
 
-export default function ItemCount({ stock }) {
+export default function ItemCount({ stock, onAdd }) {
 
 
 
@@ -36,7 +36,7 @@ export default function ItemCount({ stock }) {
                         <Button variant={"contained"} color={"success"} onClick={suma}> + </Button>
                     </div>
                     <div className='detallesComprar'>
-                        <Button variant="contained" color="primary" >
+                        <Button variant="contained" color="primary" onClick={() => onAdd(cantProduc)} >
                             COMPRAR
                         </Button>
                     </div>

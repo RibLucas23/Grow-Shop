@@ -102,16 +102,3 @@ export const productos = [
 
     },
 ]
-export const productoUnico = {
-    "id": 7777,
-    "nombre": "Kit Indoor",
-    "titulo": "KIT INDOOR LED MX 50 BLACK CARPA CULTIVO SUSTRATOS MACETAS NEGRO",
-    "url": `${kit1}`,
-    "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
-    "precio": "47.000",
-    "stock": "10",
-    "productosImgs": {
-        carpa: `${carpa}`,
-        extractor: `${extractor}`
-    }
-}

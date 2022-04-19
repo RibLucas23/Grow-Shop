@@ -19,7 +19,7 @@
 
 /* CONTADOR / BOTONERA  */
 .contador {
-    display: flexbox;
+    display: flex;
     align-content: baseline;
 }
 
