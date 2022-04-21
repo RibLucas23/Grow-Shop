@@ -33,7 +33,7 @@ function ItemDetail({ item }) {
                         </>
                     ) : (
                         <div className="botoneraItemDetalle">
-                            <ItemCount stock={item.stock} onAdd={onAdd} />
+                            <ItemCount stock={item.stock} onAdd={onAdd} item={item} />
 
                         </div>
                     )}

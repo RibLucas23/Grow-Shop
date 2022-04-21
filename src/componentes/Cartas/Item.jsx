@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import './ItemListContainer.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -9,6 +9,10 @@ import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 export default function Item({ item }) {
+    const [cantProdCarro, setCantProdCarro] = useState(0);
+    const onAdd = (cantidadProducto) => {
+        setCantProdCarro(cantidadProducto)
+    }
     // CREO LA CARTA PARA CADA PRODUCTO 
     return (
 
@@ -36,9 +40,20 @@ export default function Item({ item }) {
                 </CardActionArea>
             </Link>
             {/* Contador */}
+            {/* condicional carro. si cuando aprieto en comprar, y la cantidad de productos para el carro es mayor a 0, desaparece y aparece el boton de ir al carro */}
+            {cantProdCarro > 0 ? (
+                <>
+                    <p>{cantProdCarro} productos en el carrito</p>
+                    <Link to="/cart" className='link'>
+                        <button>ir al carro</button>
+                    </Link>
+                </>
+            ) : (
+                <div className="botoneraItemDetalle">
+                    <ItemCount stock={item.stock} onAdd={onAdd} item={item} />
 
-            <ItemCount stock={item.stock} />
-
+                </div>
+            )}
         </Card >
 
     )
