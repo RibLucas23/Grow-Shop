@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import CarritoNav from '../NavBar/CarritoNav';
 import { Link } from 'react-router-dom';
+import { Context } from '../Context/ContextProvider';
 
 const pages = ['Invernaderos y Carpas', 'Luces de cultivo', 'Fertilizantes', 'Sustratos', 'Más Categorias'];
 
@@ -26,8 +27,8 @@ const ResponsiveAppBar = () => {
         setAnchorElNav(null);
     };
 
-
-
+    let { totalDeProductos } = useContext(Context);
+    console.log(totalDeProductos)
     return (
         <AppBar className='navBar' position="static">
             <Container maxWidth="xl">
@@ -72,9 +73,9 @@ const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <Link to={"/category/" + page} >
+                                <Link key={"movile " + page} to={"/category/" + page} >
 
-                                    <MenuItem key={"movile " + page} onClick={handleCloseNavMenu}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center" >{page}</Typography>
                                     </MenuItem>
                                 </Link>
@@ -92,9 +93,9 @@ const ResponsiveAppBar = () => {
                     </Typography>
                     <Box className='menuNavBar' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={"/category/" + page} className='logo'>
+                            <Link key={page} to={"/category/" + page} className='logo'>
                                 <Button
-                                    key={page}
+
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >{page}
@@ -105,7 +106,7 @@ const ResponsiveAppBar = () => {
 
                     {/* Carrito de compras  */}
                     <Link to="/cart" className='logo'>
-                        <CarritoNav />
+                        <CarritoNav total={totalDeProductos} />
                     </Link>
 
                 </Toolbar>

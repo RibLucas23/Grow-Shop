@@ -1,3 +1,22 @@
 .imagenCarrito {
     width: 200px;
 }
+
+.itemsCarritoCompleto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemCarrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 50%;
+}
+
+.itemCarritoImagen {}

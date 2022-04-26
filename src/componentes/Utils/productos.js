@@ -6,7 +6,7 @@ export const productos = [
         "titulo": "KIT INDOOR LED MX 50 BLACK CARPA CULTIVO SUSTRATOS MACETAS NEGRO",
         "url": `${kit1}`,
         "descripcion": "Combo indoor completo incluye: carpa de cultivo con iluminación, ventilación, macetas, poleas, timer, fertilizantes y sustrato premium.",
-        "precio": "47.000",
+        "precio": "47000",
         "stock": "10",
         "category": "carpas",
         "productosImgs": {
@@ -30,7 +30,7 @@ export const productos = [
         • Utiliza sus múltiples mangas de ventilación y ventanas, aprovecha su tela 100% reflectiva.
         • Arma tu carpa sin herramientas ni conocimientos técnicos, se ensambla en menos de 5 minutos.
         • Durabilidad de por vida, con cierres de alta calidad y materiales importados.`,
-        "precio": "27.000",
+        "precio": "27000",
         "category": "carpas",
         "stock": "13"
 
@@ -41,7 +41,7 @@ export const productos = [
         "titulo": "EXTRACTOR DE AIRE HYDRA 4 PULGADAS CON ADAPTADOR",
         "url": `${extractor}`,
         "descripcion": "Extractor con gran potencia, silencioso, de fácil instalación, muy resistente, y de bajo consumo.",
-        "precio": "17.000",
+        "precio": "17000",
         "stock": "14",
         "category": "otros",
 
@@ -52,7 +52,7 @@ export const productos = [
         "titulo": "PANEL LED MX 50 BLACK CULTIVO INDOOR LED CREE",
         "url": `${panelLed}`,
         "descripcion": "Remplaza un sodio de 200Watt con 1/3 del consumo , ideal para espacios de hasta 60x60cm. • Un equipo profesional para cultivo, con el que obtendrás resultados inigualables. • Este producto cuenta con características superiores, fabricados con LED CREE de la linea MHB y XPE.",
-        "precio": "23.960",
+        "precio": "23960",
         "stock": "2",
         "category": "luces",
 
