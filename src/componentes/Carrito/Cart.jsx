@@ -12,14 +12,15 @@ export default function CartProductos(item) {
         <>
             <div key={item.item.id} className="itemCarrito" >
 
-                <h5>producto : {item.item.titulo} </h5>
+                <h5 className="itemCarritoTitulo" >producto : {item.item.titulo} </h5>
                 <div className="itemCarritoImagen">
                     <img className="imagenCarrito" src={item.item.url} alt="" />
                 </div>
 
-                <div>
-                    <p>precio unidad : {item.item.precio}</p>
+                <div className="itemCarritoInfo">
+                    <p>precio unidad: ${item.item.precio}</p>
                     <p>cantidad de unidades {item.item.cantProduc}</p>
+                    <p>Precio total: ${item.item.cantProduc * item.item.precio}</p>
                 </div>
                 < Button variant="contained" color="warning" onClick={() => {
                     removeItem(item.item.id)
