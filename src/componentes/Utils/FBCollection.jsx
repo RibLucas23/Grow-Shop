@@ -1,8 +1,7 @@
 import { getFirestore, getDocs, collection } from 'firebase/firestore'
 import { useEffect, useState } from 'react';
 
-export default function FBProducto() {
-
+export default function FBCollection() {
     const [productos, setProductos] = useState([])
 
 
@@ -18,14 +17,6 @@ export default function FBProducto() {
     console.log(productos)
 
 
-    return (
-        <>
+    return productos
 
-            {productos.map(item => (
-                <div key={item.id}>{item.titulo}</div>
-            ))}
-
-
-        </>
-    )
 }

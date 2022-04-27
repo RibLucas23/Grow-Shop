@@ -9,7 +9,7 @@ function ItemDetail({ item }) {
     const onAdd = (cantidadProducto) => {
         setCantProdCarro(cantidadProducto)
     }
-    console.log(cantProdCarro)
+    // console.log(cantProdCarro)
     return (
 
 

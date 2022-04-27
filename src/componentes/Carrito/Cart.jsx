@@ -12,7 +12,7 @@ export default function CartProductos(item) {
         <>
             <div key={item.item.id} className="itemCarrito" >
 
-                <h5 className="itemCarritoTitulo" >producto : {item.item.titulo} </h5>
+                <h5 className="itemCarritoTitulo" >{item.item.titulo} </h5>
                 <div className="itemCarritoImagen">
                     <img className="imagenCarrito" src={item.item.url} alt="" />
                 </div>

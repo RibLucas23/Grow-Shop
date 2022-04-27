@@ -18,7 +18,7 @@ export default function ContextProvider({ children }) {
             setCarrito(newCarrito);
         } else {
             setCarrito([...carrito, item]);
-            console.log(item)
+            // console.log(item)
         }
     }
     // REMOVER DEL CARRO
@@ -40,7 +40,7 @@ export default function ContextProvider({ children }) {
     function totalDinero() {
         let total = carrito.reduce((acc, item) => acc += (item.precio * item.cantProduc), 0)
         setTotalDeDinero(total)
-        console.log(total)
+        // console.log(total)
     }
 
     useEffect(() => {

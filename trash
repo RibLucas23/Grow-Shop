@@ -14,3 +14,15 @@ const firebaseConfig = {
 };
 
 initializeApp(firebaseConfig);
+
+
+imagenes = {
+    https://ibb.co/02MwwBr
+        https://ibb.co/dJM01L5
+    https://ibb.co/f0qQSvq
+        https://ibb.co/QmnWb81
+    https://ibb.co/FgCLkzQ
+        https://ibb.co/vhNXWG2
+    https://ibb.co/25BLQ1p
+        https://ibb.co/CJXL2mD
+}

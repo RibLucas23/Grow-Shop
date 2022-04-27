@@ -25,7 +25,7 @@ export default function Item({ item }) {
                         component="img"
                         height="300"
                         image={item.url}
-                        alt="kit indoor"
+                        alt={item.nombre}
                     />
                     <CardContent>
                         <Typography className='carta__titulo' gutterBottom variant="h5" component="div">

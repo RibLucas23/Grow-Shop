@@ -28,7 +28,7 @@ const ResponsiveAppBar = () => {
     };
 
     let { totalDeProductos } = useContext(Context);
-    console.log(totalDeProductos)
+    //   console.log(totalDeProductos)
     return (
         <AppBar className='navBar' position="static">
             <Container maxWidth="xl">
