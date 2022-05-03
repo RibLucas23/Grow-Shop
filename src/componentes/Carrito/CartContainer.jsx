@@ -32,9 +32,11 @@ export default function CartContainer() {
                                 clear
                             </Button >
                             <h1>Total: $ {totalDeDinero} </h1>
-                            < Button variant="contained" color="success">
-                                Terminar compra
-                            </Button >
+                            <Link to="/cart/finish" className='link'>
+                                < Button variant="contained" color="success">
+                                    Terminar compra
+                                </Button >
+                            </Link>
                         </div>
                     </div>
                 </>

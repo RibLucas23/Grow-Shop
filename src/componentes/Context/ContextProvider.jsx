@@ -29,7 +29,7 @@ export default function ContextProvider({ children }) {
     // LIMPIAR CARRO
     function clear() {
         setCarrito([])
-        console.log(carrito)
+        // console.log(carrito)
     }
 
     //TOTAL DE CANTIDAD DE PRODUCTOS

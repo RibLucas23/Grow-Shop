@@ -34,3 +34,21 @@
 
 
 }
+
+.terminarCompra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.terminarCompraBoton {
+    display: flex;
+    margin: auto !important;
+    justify-content: center;
+}
+
+.terminarCompraBoton button {
+    margin-top: 20px;
+
+}
