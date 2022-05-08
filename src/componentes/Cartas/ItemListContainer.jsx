@@ -55,7 +55,8 @@ export default function ItemListContainer() {
                     <h1>Cargando los productos...</h1>
                 </div>
             ) : (
-                <div className='cartas'>
+
+                <div className='cartasTodas'>
                     <ItemList productos={items} />
                 </div>
 

@@ -8,6 +8,7 @@ import ItemListContainer from './componentes/Cartas/ItemListContainer';
 import ContextProvider from './componentes/Context/ContextProvider';
 import CartContainer from './componentes/Carrito/CartContainer';
 import TerminarCompra from './componentes/Carrito/TerminarCompra';
+import AgregarProductos from './componentes/AgregarProductos/AgregarProductos';
 
 
 
@@ -27,6 +28,7 @@ export default function App() {
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
             <Route exact path="/cart" element={<CartContainer />} />
             <Route exact path="/cart/finish" element={<TerminarCompra />} />
+            <Route exact path="/agregarProducto" element={<AgregarProductos />} />
 
 
 

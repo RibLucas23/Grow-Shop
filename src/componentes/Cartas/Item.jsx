@@ -31,7 +31,7 @@ export default function Item({ item }) {
                         <Typography className='carta__titulo' gutterBottom variant="h5" component="div">
                             {item.titulo}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="text.secondary" className='pItem'>
                             • {item.descripcion}
                         </Typography>
                         <span className='carta__precio'>$ {item.precio}</span>
@@ -49,7 +49,7 @@ export default function Item({ item }) {
                     </Link>
                 </>
             ) : (
-                <div className="botoneraItemDetalle">
+                <div className="botoneraItem">
                     <ItemCount stock={item.stock} onAdd={onAdd} item={item} />
 
                 </div>

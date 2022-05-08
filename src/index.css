@@ -46,9 +46,3 @@ code {
   margin-bottom: 10px;
 
 }
-
-.cartas {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-}

@@ -1,8 +1,19 @@
 /* CARTAS  */
+
+.cartas {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 4;
+}
+
 .carta {
     margin: 10px;
     text-align: center;
+
 }
+
+
 
 .carta__titulo:hover {
     color: #1D8A26;
@@ -17,10 +28,16 @@
 
 }
 
+.pItem {
+    min-height: 40px;
+    max-height: 40px;
+    overflow: auto;
+}
+
 /* CONTADOR / BOTONERA  */
 .contador {
     display: flex;
-    align-content: baseline;
+    align-items: center;
 }
 
 .contador__botones {
@@ -34,17 +51,12 @@
     justify-content: center;
 }
 
-.botoneraItemDetalle {
+.botoneraItem {
     display: flex;
-    align-items: baseline;
-    margin-top: 10px;
-    flex-direction: column;
+    justify-content: space-around;
 
 }
 
-.botoneraItemDetalle button {
-    margin-top: 10px;
-}
 
 /* ITEM DETAIL  */
 .detallesComprar button {
@@ -95,6 +107,18 @@
 .itemDetail__detalles h2 {
     font-size: 46px;
     color: #45C44F;
+}
+
+.botoneraItemDetalle {
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    flex-direction: column;
+
+}
+
+.botoneraItemDetalle button {
+    margin-top: 10px;
 }
 
 /* LOADING  */

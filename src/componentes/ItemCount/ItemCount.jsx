@@ -30,20 +30,20 @@ export default function ItemCount({ stock, onAdd, item }) {
 
             <div className='contador' >
                 <div className='contador__botones'>
-                    <Button variant="contained" color="success" onClick={resta}> - </Button>
+                    <Button size="large" variant="contained" color="success" onClick={resta}> - </Button>
                     <div className="contador__num">
                         {cantProduc}
                     </div>
 
                     {cantProduc < stock ? (
-                        <Button variant={"contained"} color={"success"} onClick={suma}> + </Button>
+                        <Button size="large" variant={"contained"} color={"success"} onClick={suma}> + </Button>
                     )
                         : (<Button variant={"contained"} color={"error"} onClick={suma}> + </Button>
                         )}
 
                 </div>
                 <div className='detallesComprar'>
-                    <Button variant="contained" color="primary" onClick={() => {
+                    <Button size="large" variant="contained" color="primary" onClick={() => {
                         addToCart({ ...item, cantProduc })
                         onAdd(cantProduc)
                     }} >
