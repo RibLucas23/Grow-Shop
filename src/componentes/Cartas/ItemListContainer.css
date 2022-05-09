@@ -1,10 +1,14 @@
 /* CARTAS  */
+.cartasTodas {
+    margin-left: 120px;
+    margin-right: 120px;
+    ;
+}
 
 .cartas {
-    justify-content: center;
+    /* justify-content: center;
     display: flex;
-    flex-wrap: wrap;
-    column-count: 4;
+    flex-wrap: wrap; */
 }
 
 .carta {
@@ -13,7 +17,13 @@
 
 }
 
+.carta__titulo {
+    max-height: 100px;
+    min-height: 97px;
+    display: flex;
+    align-items: center;
 
+}
 
 .carta__titulo:hover {
     color: #1D8A26;
@@ -23,18 +33,37 @@
     display: flex;
     color: red;
     justify-content: flex-end;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 10px;
 
 }
 
 .pItem {
-    min-height: 40px;
-    max-height: 40px;
+    min-height: 60px;
+    max-height: 60px;
     overflow: auto;
 }
 
-/* CONTADOR / BOTONERA  */
+.carta__stock {
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+.itemList {
+    justify-content: center;
+}
+
+.titulosCat {
+    font-size: 3rem;
+    text-align: center;
+    /* color: #1D8A26; */
+    color: #45C44F;
+
+
+}
+
+/* CONTADOR   */
 .contador {
     display: flex;
     align-items: center;
@@ -45,18 +74,33 @@
     justify-content: space-around;
 }
 
+
+
 .contador__num {
     margin: 10px;
     font-size: 1.5rem;
     justify-content: center;
 }
 
+/* CONTADOR BOTONERA  */
 .botoneraItem {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 20px;
 
 }
 
+.botoneraItemDetalle {
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+    flex-direction: column;
+
+}
+
+.botoneraItemDetalle button {
+    margin-top: 10px;
+}
 
 /* ITEM DETAIL  */
 .detallesComprar button {
@@ -109,17 +153,6 @@
     color: #45C44F;
 }
 
-.botoneraItemDetalle {
-    display: flex;
-    align-items: baseline;
-    margin-top: 10px;
-    flex-direction: column;
-
-}
-
-.botoneraItemDetalle button {
-    margin-top: 10px;
-}
 
 /* LOADING  */
 .cargando {

@@ -16,7 +16,7 @@ export default function Item({ item }) {
     // CREO LA CARTA PARA CADA PRODUCTO 
     return (
 
-        <Card className='carta' key={item.id} sx={{ maxWidth: 345 }}>
+        <Card className='carta' elevation={10} key={item.id} sx={{ maxWidth: 450 }}>
 
             <Link to={"/item/" + item.id} className='link'>
 
@@ -36,7 +36,9 @@ export default function Item({ item }) {
                         </Typography>
                         <span className='carta__precio'>$ {item.precio}</span>
                     </CardContent>
-                    <p>Stock: {item.stock}</p>
+                    <Typography variant="h5" gutterBottom component="div">
+                        Stock: {item.stock}
+                    </Typography>
                 </CardActionArea>
             </Link>
             {/* Contador */}

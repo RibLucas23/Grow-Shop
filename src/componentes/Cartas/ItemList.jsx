@@ -1,19 +1,35 @@
+import { Container, Grid } from '@mui/material'
 import React from 'react'
 import Item from './Item'
 import './ItemListContainer.css'
+import { useParams } from 'react-router-dom';
 
 function ItemList({ productos }) {
-
+    const { id } = useParams()
     // USANDO LOS PRODUCTOS QUE ME PASA ItemListContainer,  MAPEO Y LE PASO POR PARAMETROS A ITEM 
     return (
-        <div className='cartas'>
+        <>
+            <Container maxWidth='false'>
+                {id !== "/" ? (
+                    <h1 className='titulosCat'>{id}</h1>
 
-            {productos.map(producto => (
-                <Item key={producto.id} item={producto}
+                ) : (<></>)}
 
-                />
-            ))}
-        </div>
+                <Grid container className='itemList'>
+
+
+                    {productos.map(producto => (
+                        <Grid item md={3} key={producto.id} >
+
+                            <Item item={producto} />
+
+                        </Grid>
+                    ))}
+
+                </Grid>
+            </Container>
+
+        </>
 
     )
 }

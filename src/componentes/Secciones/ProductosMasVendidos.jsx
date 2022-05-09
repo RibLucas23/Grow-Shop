@@ -6,7 +6,7 @@ export default function ProductosMasVendidos() {
         <>
             <h1 className='h1'>PRODUCTOS MÁS VENDIDOS</h1>
             <h1 className='h1 dadoVuelta'>_________</h1>
-            <div className="cartas">
+            <div className="cartasTodasContainer">
                 <ItemListContainer />
 
             </div>
