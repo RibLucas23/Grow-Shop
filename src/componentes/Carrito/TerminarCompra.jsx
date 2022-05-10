@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './carrito.css'
 import { Button } from "@mui/material";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 
@@ -26,6 +26,7 @@ export default function TestFormulario() {
         let order = {
 
             buyer: { name, phone, email },
+            date: serverTimestamp(),
 
             items: carrito.map(item => {
 
