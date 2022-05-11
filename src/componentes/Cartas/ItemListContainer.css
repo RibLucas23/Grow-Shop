@@ -1,4 +1,4 @@
-/* CARTAS  */
+/*-------------------------------------------------- ITEM LIST  */
 .cartasTodas {
     margin-left: 120px;
     margin-right: 120px;
@@ -31,7 +31,6 @@
     justify-content: flex-end;
     font-size: 2rem;
     margin-top: 10px;
-
 }
 
 .pItem {
@@ -59,21 +58,60 @@
 
 }
 
-/* CONTADOR   */
+
+/* RESPONSIVE DESIGN  */
+
+@media (max-width: 1500px) {
+    .cartasTodas {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .carta__titulo {
+        font-size: 20px !important;
+    }
+
+    .carta__precio {
+        font-size: 24px !important;
+    }
+
+    .carta__stock {
+        font-size: 20px !important;
+    }
+}
+
+
+
+/* ---------------------------------------------------------CONTADOR   */
 .contador {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 
 .contador__botones {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
+.contador__boton svg {
+    background-color: #1b5e20;
+    border-radius: 7px;
+    color: white;
+}
 
+.contador__boton__rojo svg {
+    background-color: red;
+    border-radius: 7px;
+    color: white;
+}
 
 .contador__num {
-    margin: 10px;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
     font-size: 1.5rem;
     justify-content: center;
 }
@@ -82,7 +120,8 @@
 .botoneraItem {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+
 
 }
 
@@ -98,29 +137,43 @@
     margin-top: 10px;
 }
 
-/* ITEM DETAIL  */
-.detallesComprar button {
-    margin-left: 30px;
-}
+
+
+
+
+/*------------------------------------------------------ ITEM DETAIL  */
+
 
 .itemDetail {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: auto;
 
+}
+
+.itemDetailDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .itemDetail__imagenes {
-    width: 50%;
     display: flex;
     justify-content: center;
+
 }
 
-.itemDetail__imagenes__chicas {
-    display: flex;
 
-    flex-direction: column;
+.itemDetail__imagenes__chicas img {
+    width: 200px;
+
+
+}
+
+.itemDetail__imagen_grande {
+    display: flex;
+}
+
+.itemDetail__imagen_grande img {
+    width: 500px;
 }
 
 .itemDetail__imagenes__chicas img:hover {
@@ -128,20 +181,16 @@
     opacity: 60%;
 }
 
-.itemDetail__imagenes__chicas img {
-    margin: auto 30px auto 25px;
-    width: 85%;
-}
 
 
 
 .itemDetail__detalles {
-    width: 50%;
-    margin-right: 10rem;
+    margin-right: 50px;
+
 }
 
 .itemDetail__detalles h1 {
-    font-size: 56px;
+    font-size: 40px;
 }
 
 .itemDetail__detalles h2 {
@@ -149,8 +198,96 @@
     color: #45C44F;
 }
 
+.itemDetail__detalles h3 {
+    text-align: center;
+}
 
-/* LOADING  */
+@media (max-width: 1200px) {
+    .itemDetail__imagenes__chicas {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+
+    .itemDetail__imagenes {
+        flex-direction: column-reverse;
+    }
+
+    .itemDetailDiv {
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
+
+    .itemDetail__imagenes__chicas img {
+        width: 150px;
+        margin: 5px;
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+    .itemDetail__imagen_grande img {
+        width: 400px;
+    }
+
+    .itemDetail__detalles h1 {
+        font-size: 30px;
+    }
+
+    .itemDetail__detalles h2 {
+        font-size: 25px;
+    }
+
+    .itemDetail__detalles h3 {
+        text-align: inherit;
+    }
+
+    .itemDetail__imagen_grande {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .itemDetail {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .itemDetail__detalles {
+        text-align: center;
+    }
+
+    .itemDetail__imagen_grande {
+        display: flex;
+        justify-content: center;
+    }
+
+    .itemDetail__imagen_grande {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .itemDetail__imagen_grande {
+
+        justify-content: flex-start;
+    }
+
+    .itemDetail__imagenes__chicas {
+        margin: 0;
+    }
+
+    .itemDetail__imagenes__chicas img {
+        width: 120px;
+        margin: 5px;
+    }
+}
+
+
+
+
+/*------------------------------------------------------ LOADING  */
 .cargando {
     display: flex;
     justify-content: center;

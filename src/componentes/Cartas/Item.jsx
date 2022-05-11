@@ -23,7 +23,7 @@ export default function Item({ item }) {
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="300"
+                        className='carta__imagen'
                         image={item.url}
                         alt={item.nombre}
                     />
@@ -36,7 +36,7 @@ export default function Item({ item }) {
                         </Typography>
                         <span className='carta__precio'>$ {item.precio}</span>
                     </CardContent>
-                    <Typography variant="h5" gutterBottom component="div">
+                    <Typography className='carta__stock' variant="h5" gutterBottom component="div">
                         Stock: {item.stock}
                     </Typography>
                 </CardActionArea>

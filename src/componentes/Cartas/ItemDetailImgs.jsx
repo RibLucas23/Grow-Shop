@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import React, { useState } from 'react'
 
 export default function ItemDetailImgs({ producto }) {
@@ -22,28 +23,37 @@ export default function ItemDetailImgs({ producto }) {
 
                     < div className='itemDetail__imagenes'>
 
+
                         <div className='itemDetail__imagenes__chicas'>
                             <img onClick={click} src={producto.url} alt="imagen producto" />
                             <img onClick={click2} src={producto.imagenesProducto} alt="carpa" />
                             <img onClick={click3} src={producto.imagenesProducto2} alt="extractor" />
                         </div>
 
-                        <div>
+
+                        <div className='itemDetail__imagen_grande'>
                             <img src={img} alt="imagen producto" />
                         </div>
                     </div>
+
+
                 )
                     : (
+
+
                         <div className='itemDetail__imagenes'>
 
                             <div className='itemDetail__imagenes__chicas'>
                                 <img onClick={click} src={producto.url} alt="imagen producto" />
                             </div>
+
                             {/* caja que contiene imagen grande */}
-                            <div>
+                            <div className='itemDetail__imagen_grande'>
                                 <img src={img} alt="imagen producto" />
                             </div>
+
                         </div>
+
                     )
             }
 

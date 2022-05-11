@@ -19,7 +19,7 @@ function ItemList({ productos }) {
 
 
                 {productos.map(producto => (
-                    <Grid item lg={3} md={6} key={producto.id} >
+                    <Grid item lg={3} md={4} key={producto.id} >
 
                         <Item item={producto} />
 
