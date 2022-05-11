@@ -16,12 +16,12 @@ export default function CartContainer() {
             {/* Si  hay productos mostra... */}
             {carrito.length > 0 ? (
                 <>
-                    <Container maxWidth='lg'>
+                    <Container className='todoElCarrito' maxWidth='lg'>
                         <Grid container spacing={3}>
                             <div className='carritoEntero'>
 
                                 {/* MAPEO EL CARRITO */}
-                                <Grid item xs={12} md={9}>
+                                <Grid item xs={12} md={7} sm={2} >
                                     <div className='itemsCarritoCompleto'>
                                         {carrito.map(item => (
                                             <Cart key={item.id} item={item}
@@ -30,7 +30,7 @@ export default function CartContainer() {
                                     </div>
                                 </Grid>
                                 {/* BOTONERA CARRITO*/}
-                                <Grid item xs={12} md={3}>
+                                <Grid item xs={12} md={5} sm={2}>
 
                                     <Paper className='paperCarrito' variant='outlined' >
                                         <div className='botoneraCarrito'>

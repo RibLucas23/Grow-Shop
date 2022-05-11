@@ -11,12 +11,12 @@ export default function CartProductos(item) {
     return (
         <>
             <div key={item.item.id} className="itemCarrito" >
-
-                <h5 className="itemCarritoTitulo" >{item.item.titulo} </h5>
-                <div className="itemCarritoImagen">
-                    <img className="imagenCarrito" src={item.item.url} alt="" />
+                <div className="itemCarritoDiv">
+                    <h5 className="itemCarritoTitulo" >{item.item.titulo} </h5>
+                    <div className="itemCarritoImagen">
+                        <img className="imagenCarrito" src={item.item.url} alt="" />
+                    </div>
                 </div>
-
                 <div className="itemCarritoInfo">
                     <p>precio unidad: ${item.item.precio}</p>
                     <p>cantidad de unidades {item.item.cantProduc}</p>

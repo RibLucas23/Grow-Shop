@@ -90,6 +90,7 @@ export default function TestFormulario() {
                                 '& > :not(style)': { m: 1, width: '25ch' },
                             }}
                             noValidate
+                            className="terminarCompra__formulario"
                             autoComplete="off"
                         >
                             {/* Form Nombre  */}
