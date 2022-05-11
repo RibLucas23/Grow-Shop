@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './footer.css'
-
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 export default function Footer() {
     return (
         <footer className='footer' >
@@ -34,17 +37,17 @@ export default function Footer() {
                     <ul>
                         <li>
                             <div className='linkFooter'>
-                                +54 11 558-5200
+                                <LocalPhoneIcon /> +54 11 558-5200
                             </div>
                         </li>
                         <li>
-                            <a className='linkFooter' href="facebook.com">facebook</a>
+                            <a className='linkFooter' href="www.facebook.com"> <FacebookIcon /> Facebook</a>
                         </li>
                         <li>
-                            <a className='linkFooter' href="instagram.com">instagram</a>
+                            <a className='linkFooter' href="www.instagram.com"> <InstagramIcon /> Instagram</a>
                         </li>
-                        <li>
-                            <a className='linkFooter' href="gmail.com">gmail</a>
+                        <li className='linkFooter'>
+                            <EmailIcon /> Growshop@growshop.com
                         </li>
                     </ul>
                 </div>
