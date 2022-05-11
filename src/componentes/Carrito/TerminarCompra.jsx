@@ -104,7 +104,7 @@ export default function TestFormulario() {
                             />
 
                             {/* Form Mail  */}
-                            <TextField id="outlined-basic" label="Email" variant="outlined" required={true}
+                            <TextField id="outlined-basic" label="Email" variant="outlined" required={true} type="email"
                                 value={email}
                                 onChange={(e) => {
                                     setEmail(e.target.value)

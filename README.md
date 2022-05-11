@@ -1,7 +1,19 @@
-# Getting Started with Create React App
+# GrowShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Growshop E-Commerce app made whit React Js, Material Ui and Firebase.
+![](src%5CAnimation.gif)
+____
+## Built with
+- React Js .
+- Material UI.
+- Firebase.
+ 
+____
+ # Important
 
+
+ run `npm install` to dowload all the dependencies
+--
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,10 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +37,34 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+-----
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment 
+### `firebase deploy`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After the 'npm run build' script.
+<br> Run `firebase deploy`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+## Extras
 
-## Learn More
+The project arises as a job opportunity for a business in the neighborhood where I live. It is a simple app, where the same owners of the business will be able to add, remove or modify products.
+The app has 4 sections:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - The beginning, where you will see the most sold products and the products in promotion.
+  - Sections for each category of products.
+  - The shopping cart and his final part where the customer will upload their data to be contacted and complete the purchase.
+  - Admin section where new products can be added. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Spanish version
 
-### Code Splitting
+El proyecto surgue como una oportunidad de trabajo para un negocio del barrio donde vivo. Es una app simple, donde, los mismos dueños del local van a poder agregar, quitar o modificar productos. 
+La app cuenta con 4 secciones:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ - El inicio, donde se veran los productos mas vendidos y los productos en promocion.
+ - Secciones para cada Categoria de productos.
+ - El carrito de compras y su parte final donde el cliente cargara sus datos para ser contactado y terminar la compra.
+ - Seccion de Admin donde se podran agregar productos nuevos.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
