@@ -10,22 +10,22 @@ export default function Footer() {
                 <div className='footer-categorias '>
                     <ul>
                         <li>
-                            <Link className='link' to='/'>Inicio</Link>
+                            <Link className='linkFooter' to='/'>Inicio</Link>
                         </li>
                         <li>
-                            <Link className='link' to='/category/Invernaderos y Carpas'>Invernaderos y Carpas</Link>
+                            <Link className='linkFooter' to='/category/Invernaderos y Carpas'>Invernaderos y Carpas</Link>
                         </li>
                         <li>
-                            <Link className='link' to='/category/Luces de cultivo'>Luces de cultivo</Link>
+                            <Link className='linkFooter' to='/category/Luces de cultivo'>Luces de cultivo</Link>
                         </li>
                         <li>
-                            <Link className='link' to='/category/Fertilizantes'>Fertilizantes</Link>
+                            <Link className='linkFooter' to='/category/Fertilizantes'>Fertilizantes</Link>
                         </li>
                         <li>
-                            <Link className='link' to='/category/Sustratos'>Sustratos</Link>
+                            <Link className='linkFooter' to='/category/Sustratos'>Sustratos</Link>
                         </li>
                         <li>
-                            <Link className='link' to='/category/Más Categorias/'>Más Categorias</Link>
+                            <Link className='linkFooter' to='/category/Más Categorias/'>Más Categorias</Link>
                         </li>
                     </ul>
                 </div>
@@ -33,25 +33,25 @@ export default function Footer() {
                 <div className='footer-contacto '>
                     <ul>
                         <li>
-                            <div className='link'>
+                            <div className='linkFooter'>
                                 +54 11 558-5200
                             </div>
                         </li>
                         <li>
-                            <a className='link' href="facebook.com">facebook</a>
+                            <a className='linkFooter' href="facebook.com">facebook</a>
                         </li>
                         <li>
-                            <a className='link' href="instagram.com">instagram</a>
+                            <a className='linkFooter' href="instagram.com">instagram</a>
                         </li>
                         <li>
-                            <a className='link' href="gmail.com">gmail</a>
+                            <a className='linkFooter' href="gmail.com">gmail</a>
                         </li>
                     </ul>
                 </div>
 
                 {/* MODO ADMIN  */}
                 <div className='footer-admin'>
-                    <Link to='/agregarProducto' className='link'> Agregar Producto</Link>
+                    <Link to='/agregarProducto' className='linkFooter'> Agregar Producto</Link>
                 </div>
 
 
