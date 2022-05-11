@@ -1,6 +1,10 @@
 # GrowShop
 
 This is a Growshop E-Commerce app made whit React Js, Material Ui and Firebase.
+
+## Here you can see the page already deployed:
+# `https://growshop-31140.web.app`
+
 ![](src%5CAnimation.gif)
 ____
 ## Built with
@@ -57,13 +61,18 @@ The app has 4 sections:
   - The shopping cart and his final part where the customer will upload their data to be contacted and complete the purchase.
   - Admin section where new products can be added. 
 
-# Spanish version
+
+-----
+# `Spanish version`
 
 ## Hecho con:
 - React Js .
 - Material UI.
 - Firebase.
  
+ ## Aca podes ver la pagina ya subida a un servidor:
+# `https://growshop-31140.web.app`
+
 ____
  # Importante
 
