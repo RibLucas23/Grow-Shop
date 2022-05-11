@@ -1,5 +1,6 @@
 .carritoEntero {
     display: flex;
+    margin-top: 5%;
 }
 
 .imagenCarrito {
@@ -16,11 +17,11 @@
     flex-direction: row;
     align-items: center;
     margin: 10px;
-    margin-left: 5%;
+    margin-left: 10%;
+    height: 220px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    width: 50%;
 }
 
 .itemCarritoTitulo {
@@ -28,12 +29,6 @@
     text-align: center;
 }
 
-.botones {
-    width: 50%;
-    margin-right: 5%;
-
-
-}
 
 .terminarCompra {
     display: flex;
@@ -51,4 +46,30 @@
 .terminarCompraBoton button {
     margin-top: 20px;
 
+}
+
+.paperCarrito {
+    margin-top: 10px;
+    height: 220px;
+}
+
+.botoneraCarrito {
+    /* width: 50%; */
+    /* margin-right: 5%; */
+    margin: 10%;
+}
+
+.botonesCarrito {
+    display: flex;
+    justify-content: center;
+}
+
+.btnCarritoInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnCarritoInicio button {
+    margin: 4rem;
 }

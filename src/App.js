@@ -1,4 +1,3 @@
-import './App.css';
 import ImagenSuperior from './componentes/ImagenSuperior';
 import ProductosMasVendidos from './componentes/Secciones/ProductosMasVendidos';
 import ResponsiveAppBar from './componentes/NavBar/ResponsiveAppBar';
@@ -9,6 +8,7 @@ import ContextProvider from './componentes/Context/ContextProvider';
 import CartContainer from './componentes/Carrito/CartContainer';
 import TerminarCompra from './componentes/Carrito/TerminarCompra';
 import AgregarProductos from './componentes/AgregarProductos/AgregarProductos';
+import Footer from './componentes/Footer/Footer';
 
 
 
@@ -18,9 +18,10 @@ export default function App() {
       <ContextProvider>
 
         <BrowserRouter>
-          <ResponsiveAppBar />
-          <ImagenSuperior />
 
+          <ResponsiveAppBar />
+
+          <ImagenSuperior />
           <Routes>
             <Route exact path="/" element={<ProductosMasVendidos />} />
             <Route exact path="/category/:id" element={<ItemListContainer />} />
@@ -30,6 +31,7 @@ export default function App() {
             <Route exact path="/agregarProducto" element={<AgregarProductos />} />
           </Routes>
 
+          <Footer />
 
         </BrowserRouter>
       </ContextProvider>

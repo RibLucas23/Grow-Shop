@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 //css
-import './agregarProductos.css'
+import "./agregarProductos.css";
 //mui
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from "@mui/material";
 //firebase
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { Link } from "react-router-dom";
 
 export default function AgregarProductos() {
     //creo los estados (datos del producto nuevo)
@@ -37,58 +35,53 @@ export default function AgregarProductos() {
 
     return (
         <>
-            <Box
-                component="form"
-                sx={{
-                    '& > :not(style)': { m: 1, width: '25ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <TextField id="outlined-basic" label="Nombre" variant="outlined"
-                    value={nombre}
-                    onChange={(e) => {
-                        setNombre(e.target.value)
-                    }} />
+            <div className="agregarProductos">
+                <h1 className="h1">Agregar producto</h1>
+                <div className="formAgregarProductos">
+                    <TextField id="outlined-basic" label="Nombre" variant="outlined"
+                        value={nombre}
+                        onChange={(e) => {
+                            setNombre(e.target.value)
+                        }} />
 
-                <TextField id="outlined-basic" label="titulo" variant="outlined"
-                    value={titulo}
-                    onChange={(e) => {
-                        setTitulo(e.target.value)
-                    }} />
+                    <TextField id="outlined-basic" label="titulo" variant="outlined"
+                        value={titulo}
+                        onChange={(e) => {
+                            setTitulo(e.target.value)
+                        }} />
 
-                <TextField id="outlined-basic" label="descripcion" variant="outlined"
-                    value={descripcion}
-                    onChange={(e) => {
-                        setDescripcion(e.target.value)
-                    }} />
-                <TextField id="outlined-basic" label="precio" variant="outlined"
-                    value={precio}
-                    onChange={(e) => {
-                        setPrecio(e.target.value)
-                    }} />
+                    <TextField id="outlined-basic" label="descripcion" variant="outlined"
+                        value={descripcion}
+                        onChange={(e) => {
+                            setDescripcion(e.target.value)
+                        }} />
+                    <TextField id="outlined-basic" label="precio" variant="outlined"
+                        value={precio}
+                        onChange={(e) => {
+                            setPrecio(e.target.value)
+                        }} />
 
-                <TextField id="outlined-basic" label="imagen" variant="outlined"
-                    value={imagen}
-                    onChange={(e) => {
-                        setImagen(e.target.value)
-                    }} />
-                <TextField id="outlined-basic" label="categoria" variant="outlined"
-                    value={categoria}
-                    onChange={(e) => {
-                        setCategoria(e.target.value)
-                    }} />
-                <TextField id="outlined-basic" label="stock" variant="outlined"
-                    value={stock}
-                    onChange={(e) => {
-                        setStock(e.target.value)
-                    }} />
-
-                <div className="terminarCompraBoton">
+                    <TextField id="outlined-basic" label="url imagen" variant="outlined"
+                        value={imagen}
+                        onChange={(e) => {
+                            setImagen(e.target.value)
+                        }} />
+                    <TextField id="outlined-basic" label="categoria" variant="outlined"
+                        value={categoria}
+                        onChange={(e) => {
+                            setCategoria(e.target.value)
+                        }} />
+                    <TextField id="outlined-basic" label="stock" variant="outlined"
+                        value={stock}
+                        onChange={(e) => {
+                            setStock(e.target.value)
+                        }} />
+                </div>
+                <div className="btnAgregarProducto">
                     <Button variant="contained" color="success" onClick={() => { agregarProducto() }}> Agregar Producto </Button>
 
                 </div>
-            </Box>
+            </div>
         </>
     )
 }

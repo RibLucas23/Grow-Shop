@@ -19,6 +19,12 @@ export default function TestFormulario() {
 
     const [phone, setPhone] = useState("");
 
+    const [errorName, setErrorName] = useState("");
+    const [leyendaName, setLeyendaName] = useState("");
+    const [errorPhone, setErrorPhone] = useState("");
+    const [leyendaPhone, setLeyendaPhone] = useState("");
+    const [errorMail, setErrorMail] = useState("");
+    const [leyendaMail, setLeyendaMail] = useState("");
     function terminarCompra() {
 
         //example buyer
@@ -48,7 +54,7 @@ export default function TestFormulario() {
 
         };
         if (name === '' || email === '' || phone === '') {
-            alert('Por favor completa todos los campos')
+            console.log('Por favor completa todos los campos')
         } else if (carrito.length === 0) {
             alert('No hay productos en el carrito')
         } else {
@@ -61,11 +67,10 @@ export default function TestFormulario() {
             console.log(order);
         }
     }
+
     //debugger
     // useEffect(() => {
-
     //     console.log(name, email, phone);
-
     // }, [name, email, phone]);
 
     return (
@@ -87,25 +92,63 @@ export default function TestFormulario() {
                             noValidate
                             autoComplete="off"
                         >
-                            <TextField id="outlined-basic" label="Nombre" variant="outlined"
+                            {/* Form Nombre  */}
+                            <TextField id="outlined-basic" label="Nombre" variant="outlined" required={true}
                                 value={name}
                                 onChange={(e) => {
                                     setName(e.target.value)
-                                }} />
+                                }
+                                }
+                                error={errorName}
+                                helperText={leyendaName}
+                            />
 
-                            <TextField id="outlined-basic" label="Email" variant="outlined"
+                            {/* Form Mail  */}
+                            <TextField id="outlined-basic" label="Email" variant="outlined" required={true}
                                 value={email}
                                 onChange={(e) => {
                                     setEmail(e.target.value)
-                                }} />
+                                }
+                                }
+                                error={errorMail}
+                                helperText={leyendaMail} />
 
-                            <TextField id="outlined-basic" label="Telefono" variant="outlined"
+                            {/* Form Phone  */}
+                            <TextField id="outlined-basic" label="Telefono" variant="outlined" required={true}
                                 value={phone}
                                 onChange={(e) => {
                                     setPhone(e.target.value)
-                                }} />
+                                }
+                                }
+                                error={errorPhone}
+                                helperText={leyendaPhone} />
+                            {/* Boton de terminar Compra  */}
                             <div className="terminarCompraBoton">
-                                <Button variant="contained" color="success" onClick={() => { terminarCompra() }}> Terminar compra </Button>
+                                <Button variant="contained" color="success" onClick={() => {
+                                    // Hago una Validacion para saber si completo todos los campos
+                                    if (name === "") {
+                                        setErrorName('true')
+                                        setLeyendaName('Por favor completa el nombre')
+                                    } else {
+                                        setErrorName('')
+                                        setLeyendaName('')
+                                    }
+                                    if (email === "") {
+                                        setErrorMail('true')
+                                        setLeyendaMail('Por favor completa el email')
+                                    } else {
+                                        setErrorMail('')
+                                        setLeyendaMail('')
+                                    }
+                                    if (phone === "") {
+                                        setErrorPhone('true')
+                                        setLeyendaPhone('Por favor completa el telefono')
+                                    } else {
+                                        setErrorPhone('')
+                                        setLeyendaPhone('')
+                                    }
+                                    terminarCompra()
+                                }}> Terminar compra </Button>
 
                             </div>
                         </Box>

@@ -9,25 +9,25 @@ function ItemList({ productos }) {
     // USANDO LOS PRODUCTOS QUE ME PASA ItemListContainer,  MAPEO Y LE PASO POR PARAMETROS A ITEM 
     return (
         <>
-            <Container maxWidth='false'>
-                {id !== "/" ? (
-                    <h1 className='titulosCat'>{id}</h1>
 
-                ) : (<></>)}
+            {id !== "/" ? (
+                <h1 className='titulosCat'>{id}</h1>
 
-                <Grid container className='itemList'>
+            ) : (<></>)}
+
+            <Grid container className='itemList'>
 
 
-                    {productos.map(producto => (
-                        <Grid item md={3} key={producto.id} >
+                {productos.map(producto => (
+                    <Grid item lg={3} md={6} key={producto.id} >
 
-                            <Item item={producto} />
+                        <Item item={producto} />
 
-                        </Grid>
-                    ))}
+                    </Grid>
+                ))}
 
-                </Grid>
-            </Container>
+            </Grid>
+
 
         </>
 

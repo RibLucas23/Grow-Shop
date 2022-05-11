@@ -8,10 +8,10 @@ export default function ItemDetailImgs({ producto }) {
 
     }
     const click2 = () => {
-        setImg(producto.productosImgs.img1)
+        setImg(producto.imagenesProducto)
     }
     const click3 = () => {
-        setImg(producto.productosImgs.img2)
+        setImg(producto.imagenesProducto2)
     }
 
     console.log(producto)
