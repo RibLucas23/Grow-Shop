@@ -17,6 +17,7 @@ export default function AgregarProductos() {
     const [categoria, setCategoria] = useState("");
     const [stock, setStock] = useState("");
 
+    const [contraseña, setContraseña] = useState("");
     //Base de datos (database)
     const db = getFirestore();
     //creo variable del producto nuevo
@@ -24,12 +25,17 @@ export default function AgregarProductos() {
     //creo una funcion para agregar el producto nuevo 
     function agregarProducto() {
         //si esta vacio algun campo no se puede agregar
-        if (nombre === '' || titulo === '' || descripcion === '' || precio === '' || imagen === '' || categoria === '' || stock === '') {
+        if (nombre === '' || titulo === '' || descripcion === '' || precio === '' || imagen === '' || categoria === '' || stock === '' || contraseña === '') {
             alert('Por favor completa todos los campos')
         } else {
             //Si todos los campos estan completos, se agrega el producto
-            const productsCollection = collection(db, 'productos');
-            addDoc(productsCollection, productoNuevo).then(() => { alert('Producto agregado con exito') });
+            if (contraseña === 'admin') {
+                const productsCollection = collection(db, 'productos');
+                addDoc(productsCollection, productoNuevo).then(() => { alert('Producto agregado con exito') });
+            }
+            else {
+                alert('Contraseña incorrecta')
+            }
         }
     }
 
@@ -75,6 +81,11 @@ export default function AgregarProductos() {
                         value={stock}
                         onChange={(e) => {
                             setStock(e.target.value)
+                        }} />
+                    <TextField id="outlined-basic" label="constraseña" variant="outlined"
+                        value={contraseña}
+                        onChange={(e) => {
+                            setContraseña(e.target.value)
                         }} />
                 </div>
                 <div className="btnAgregarProducto">
