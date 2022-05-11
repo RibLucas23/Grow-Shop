@@ -50,3 +50,9 @@ code {
   margin-bottom: 10px;
 
 }
+
+@media (max-width: 710px) {
+  .h1 {
+    font-size: 2.5rem;
+  }
+}
