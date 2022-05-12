@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Context } from '../Context/ContextProvider'
 
 import Box from '@mui/material/Box';
@@ -7,11 +7,11 @@ import './carrito.css'
 import { Button } from "@mui/material";
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 import { Link } from "react-router-dom";
-
+import ModalCompra from "./ModalCompra";
 
 
 export default function TestFormulario() {
-    let { carrito, clear, totalDeDinero } = useContext(Context)
+    let { carrito, totalDeDinero } = useContext(Context)
 
     const [name, setName] = useState("");
 
@@ -25,6 +25,12 @@ export default function TestFormulario() {
     const [leyendaPhone, setLeyendaPhone] = useState("");
     const [errorMail, setErrorMail] = useState("");
     const [leyendaMail, setLeyendaMail] = useState("");
+
+    const [date, setDate] = useState("");
+    const [idOrden, setIdOrden] = useState("");
+    const [open, setOpen] = useState(false);
+    const abrirModal = () => { setOpen(true) }
+
     function terminarCompra() {
 
         //example buyer
@@ -61,9 +67,13 @@ export default function TestFormulario() {
             //crear una orden en la base de datos
             const db = getFirestore();
             const ordersCollection = collection(db, 'orders');
-            addDoc(ordersCollection, order).then(({ id }) => { alert(order.buyer.name + ' Tu compra ha sido realizada con exito \n Tu orden de compra es: ' + id) });
-            // despues borro el carrito 
-            clear()
+            addDoc(ordersCollection, order).then(({ id }) => {
+
+                abrirModal();
+                setDate(order.date)
+                setIdOrden(id)
+            });
+
             console.log(order);
         }
     }
@@ -150,10 +160,18 @@ export default function TestFormulario() {
                                     }
                                     terminarCompra()
                                 }}> Terminar compra </Button>
-
                             </div>
                         </Box>
                     </div>
+
+                    {/* Modal de confirmacion */}
+                    <ModalCompra
+                        openModal={open}
+                        setOpenModal={setOpen}
+                        date={date}
+                        idOrden={idOrden}
+                        carrito={carrito}
+                    />
                 </>
 
             ) : (

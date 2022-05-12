@@ -42,6 +42,7 @@ export default function AgregarProductos() {
     return (
         <>
             <div className="agregarProductos">
+
                 <h1 className="h1">Agregar producto</h1>
                 <div className="formAgregarProductos">
                     <TextField id="outlined-basic" label="Nombre" variant="outlined"

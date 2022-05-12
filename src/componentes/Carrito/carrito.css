@@ -139,3 +139,19 @@
     }
 
 }
+
+/*----------------------------------------------------------------------------- MODAL  */
+
+
+
+
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2dbdb;
+
+}
