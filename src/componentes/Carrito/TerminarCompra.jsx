@@ -168,6 +168,7 @@ export default function TestFormulario() {
                     <ModalCompra
                         openModal={open}
                         setOpenModal={setOpen}
+                        name={name}
                         date={date}
                         idOrden={idOrden}
                         carrito={carrito}
