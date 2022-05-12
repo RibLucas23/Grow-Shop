@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ItemListContainer.css'
+import '../Cartas/ItemListContainer.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,7 +8,7 @@ import { CardActionArea } from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
-export default function Item({ item }) {
+export default function Promocion({ item }) {
     const [cantProdCarro, setCantProdCarro] = useState(0);
     const onAdd = (cantidadProducto) => {
         setCantProdCarro(cantidadProducto)
@@ -34,17 +34,8 @@ export default function Item({ item }) {
                         <Typography variant="body2" color="text.secondary" className='pItem'>
                             • {item.descripcion}
                         </Typography>
-                        {item.promocion ? (
-                            <>
-                                <div className='preciosDiv'>
-                                    <p className='carta__precio__viejo'> $ {item.precioViejo}</p>
-                                    <p className='carta__precio'>$ {item.precio}</p>
+                        <span className='carta__precio__viejo'>$ {item.precio}</span>
 
-                                </div>
-                            </>
-                        ) : (
-                            <p className='carta__precio'>$ {item.precio}</p>
-                        )}
                     </CardContent>
                     <Typography className='carta__stock' variant="h5" gutterBottom component="div">
                         Stock: {item.stock}

@@ -26,10 +26,22 @@
     color: #1D8A26;
 }
 
-.carta__precio {
+.preciosDiv {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carta__precio {
+    color: #2e8836;
+
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.carta__precio__viejo {
     color: red;
-    justify-content: flex-end;
+    text-decoration: line-through;
     font-size: 2rem;
     margin-top: 10px;
 }
